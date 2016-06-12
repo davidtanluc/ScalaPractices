@@ -12,6 +12,8 @@ def solution(A: List[Int]): Int = {
 
   -1
 }
+
+//10, 50, 5, 1]
 println("The number is :" + solution(A))
 //List(1, 2, 5, 8, 10, 20)
 //The number is :1
