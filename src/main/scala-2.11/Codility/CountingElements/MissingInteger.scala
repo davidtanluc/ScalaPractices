@@ -3,8 +3,8 @@ def solution(A:Array[Int],N:Int):Int={
   val sorted = A.sorted
   val smallestIndex = sorted.indexWhere(_ > 0)
   //println(smallestIndex)
-  if(smallestIndex < 0) return 1
-  if(sorted(smallestIndex) > 1) return 1
+  if(smallestIndex < 0) return 1 // -1 did not found
+  if(sorted(smallestIndex) > 1) return 1 // when 1 is missing
 
 
   for(n <- smallestIndex until A.length-1){
