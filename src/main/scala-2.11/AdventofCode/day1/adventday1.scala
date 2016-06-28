@@ -11,5 +11,6 @@ for(l<- lineIterator){
       case(a,_)=> acc
     }
   })
-  println("result ",result)
+  println("result ",result)//(result ,280)
+
 }
