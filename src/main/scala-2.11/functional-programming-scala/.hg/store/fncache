@@ -1,0 +1,53 @@
+data/ComplexTree/src/main/scala/shapes.scala.i
+data/ComplexTree/src/test/scala/TestSize.scala.i
+data/WordCount/src/test/scala/project1/GetMessageSpec.scala.i
+data/ComplexTree/doc/sizeComplexGroup.PNG.i
+data/SimpleApp/src/main/scala/simpleApp/Hello.scala.i
+data/SimpleApp/src/main/scala/simpleApp/GoodAppFunctional.scala.i
+data/ComplexTree/src/test/scala/TestScale.scala.i
+data/ComplexTree/doc/TestScale.PNG.i
+data/WordCount/src/main/scala/project1/WordCountFunctional.scala.i
+data/Functors and Factory Pattern/README.md.i
+data/WordCount/project/input1.txt.i
+data/ComplexTree/src/test/scala/TestDepth.scala.i
+data/ComplexTree/src/main/scala/boundingBox.scala.i
+data/Functors and Factory Pattern/src/test/scala/lawTests.scala.i
+data/Functors and Factory Pattern/src/main/scala/behaviors.scala.i
+data/SimpleApp/src/main/scala/simpleApp/BadApp.scala.i
+data/WordCount/input.txt.i
+data/ComplexTree/src/main/scala/size.scala.i
+data/ComplexTree/doc/TestSize.PNG.i
+data/SimpleApp/src/main/scala/simpleApp/GoodAppImp.scala.i
+data/WordCount/src/doc/ResultImperative.PNG.i
+data/WordCount/src/doc/wordCount.i
+data/SimpleApp/input1.txt.i
+data/ComplexTree/doc/TestDepth.PNG.i
+data/Functors and Factory Pattern/src/test/scala/fixtures.scala.i
+data/Functors and Factory Pattern/src/test/scala/behaviorTests.scala.i
+data/WordCount/src/test/scala/project1/WordCountFunctionalTest.scala.i
+data/SimpleApp/someFile.txt.i
+data/ComplexTree/build.sbt.i
+data/.hgignore.i
+data/WordCount/src/doc/ResultFunctional.PNG.i
+data/Functors and Factory Pattern/src/main/scala/structures.scala.i
+data/WordCount/src/main/scala/project1/SimpleMsg.scala.i
+data/WordCount/src/main/scala/project1/WordCount2.scala.i
+data/ComplexTree/src/test/scala/TestFixtures.scala.i
+data/ComplexTree/doc/depthComplexGroup.PNG.i
+data/WordCount/src/test/scala/project1/WordCountTest.scala.i
+data/ComplexTree/src/main/scala/scale.scala.i
+data/SimpleApp/build.sbt.i
+data/WordCount/build.sbt.i
+data/WordCount/input1.txt.i
+data/ComplexTree/src/test/scala/Main.scala.i
+data/ComplexTree/src/main/scala/depth.scala.i
+data/Functors and Factory Pattern/build.sbt.i
+data/Functors and Factory Pattern/project/plugins.sbt.i
+data/ComplexTree/src/test/scala/TestBoundingBox.scala.i
+data/WordCount/readMe.i
+data/WordCount/src/doc/input.txt.i
+data/WordCount/src/main/scala/project1/GetMessage.scala.i
+data/SimpleApp/input.i
+data/Functors and Factory Pattern/doc/report.md.i
+data/SimpleApp/src/main/scala/simpleApp/CountLines.scala.i
+data/README.md.i
