@@ -1,1 +1,0 @@
-New unemployment claims are compiled weekly to show the number of individuals who filed for unemployment insurance for the first time. An increasing (decreasing) trend suggests a deteriorating (improving) labor market. The four-week moving average of new claims smoothes out weekly volatility
