@@ -14,3 +14,6 @@ def solution(N:Int):Int={
 
 solution(529)//4
 solution(1041)//5
+
+// 100 %
+//https://codility.com/demo/results/trainingJ9WNGX-N3X/

@@ -41,4 +41,6 @@ def solution(A:Array[Int]):Int = {
 }
 
 ////////////////
+// 100 %
+//https://codility.com/demo/results/trainingU3ESCW-BH7/
 //https://codility.com/demo/results/trainingC4WF43-VKA/

@@ -1,4 +1,4 @@
-def Solution(S: String): Int = {
+def solution(S: String): Int = {
   if (S.isEmpty) return 1 //balance
   val xs = S.split("").toList
 
@@ -24,7 +24,8 @@ def Solution(S: String): Int = {
   1 //balance
 
 }
-//https://codility.com/demo/results/trainingQWV9PA-VND/
+// 100 %
+//https://codility.com/demo/results/trainingWFJG5C-89S/
 ///// test cases ///
-Solution("([)()]") // 0
-Solution("{[()()]}") //1
+solution("([)()]") // 0
+solution("{[()()]}") //1

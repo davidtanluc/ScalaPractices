@@ -26,4 +26,5 @@ solution(A)
 def solution(A: Array[Int]) = A.map(Math.abs).groupBy(elem => elem).size
 
 //https://codility.com/demo/results/trainingR5P7UP-7ZJ/
+//https://codility.com/demo/results/trainingAMEUHU-W8X/
 // 100 %
