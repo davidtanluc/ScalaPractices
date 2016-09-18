@@ -74,7 +74,7 @@ def solution(T: Tree): Int = {
     case Tree2(_, null, r) => rec(r) + 1
     case Tree2(_, l, r) => 1 + Math.max(rec(l), rec(r))
   }
-  rec(T)
+  rec(T) //2
 }
 val tree = new Tree(
   5,
