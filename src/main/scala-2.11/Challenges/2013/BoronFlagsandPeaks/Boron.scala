@@ -3,7 +3,7 @@
 val A = Array(1,5,3,4,3,4,1,2,3,4,6,2)
 
 
-solution(A)  //3
+println(solution(A))  //3
 
 
 def solution(A:Array[Int]):Int={

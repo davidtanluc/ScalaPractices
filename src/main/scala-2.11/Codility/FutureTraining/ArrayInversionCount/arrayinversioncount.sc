@@ -29,86 +29,56 @@ val MAX_NR = 1000000000
 //mergeSort(A)
 def mergeSort(xs: Array[Int]): Int = {
   var inversion_count = 0
+  if (xs.length < 2) return inversion_count
+  /* xs is NOT sorted */
+  val n = xs.length / 2
+  val (left, right) = xs splitAt n
 
-  if (xs.length > 1) {
-    val n = xs.length / 2
-    val (fst, snd) = xs splitAt n
-    //println(fst.toList,snd.toList)
-    /*
-(List(-1, 6, 3),List(4, 7, 4))
-(List(-1),List(6, 3))
-(List(6),List(3))
-////
-(List(4),List(7, 4))
-(List(7),List(4))
- */
+  /* mergesort left , mergesort right */
+  inversion_count += mergeSort(left)
+  if (inversion_count > MAX_NR) return -1
+  inversion_count += mergeSort(right)
+  if (inversion_count > MAX_NR) return -1
+  ////
+  var left_idx = 0
+  val left_size = left.length
+  var right_idx = 0
+  val right_size = right.length
+  var k = 0
 
-    inversion_count += mergeSort(fst)
-    if (inversion_count > MAX_NR) return -1
-    inversion_count += mergeSort(snd)
-    if (inversion_count > MAX_NR) return -1
+  while (left_idx < left_size && right_idx < right_size) {
 
-    ////
-    var left = 0
-    var right = 0
-    var k = 0
+    if (left(left_idx) <= right(right_idx)) {
+      xs(k) = left(left_idx)
+      left_idx += 1
 
-    while (left < fst.length && right < snd.length) {
+    } else {
+      xs(k) = right(right_idx)
+      right_idx += 1
 
-      if (fst(left) <= snd(right)) {
-        xs(k) = fst(left)
-        left += 1
+      inversion_count += left_size - left_idx
+      if (inversion_count > MAX_NR) return -1
 
-      } else {
-
-        xs(k) = snd(right)
-        right += 1
-        inversion_count += fst.length - left
-        if (inversion_count > MAX_NR) return -1
-        
-      }
-
-      k += 1
     }
-    //println("#1",xs.toList,"left",left,"right",right)
-    /*
-(#1,List(3, 3),left,0,right,1)
-(#1,List(-1, 6, 3),left,1,right,0)
-(#1,List(4, 4),left,0,right,1)
-(#1,List(4, 7, 4),left,1,right,0)
-(#1,List(-1, 3, 4, 4, 6, 4),left,3,right,2))
-     */
 
-    //# left
-    while (left < fst.length) {
-      xs(k) = fst(left)
-      left += 1
-      k += 1
-    }
-    //println("#Left",xs.toList)
-    /*
-(#Left,List(3, 6))
-(#Left,List(-1, 6, 3))
-(#Left,List(4, 7))
-(#Left,List(4, 7, 4))
-(#Left,List(-1, 3, 4, 4, 6, 4))
-     */
-
-    //# right
-    while (right < snd.length) {
-      xs(k) = snd(right)
-      right += 1
-      k += 1
-    }
-    // println("#Right",xs.toList)
-    /*
-(#Right,List(3, 6))
-(#Right,List(-1, 3, 6))
-(#Right,List(4, 7))
-(#Right,List(4, 4, 7))
-(#Right,List(-1, 3, 4, 4, 6, 7))
-     */
+    k += 1
   }
+  //println("#1",xs.toList,"left",left,"right",right)
+  //# left
+  while (left_idx < left_size) {
+    xs(k) = left(left_idx)
+    left_idx += 1
+    k += 1
+  }
+  //println("#Left",xs.toList)
+
+  //# right
+  while (right_idx < right_size) {
+    xs(k) = right(right_idx)
+    right_idx += 1
+    k += 1
+  }
+  // println("#Right",xs.toList)
   //
   inversion_count
 }
@@ -117,7 +87,7 @@ val A = Array(-1, 6, 3, 4, 7, 4)
 solution(A) //4
 def solution(A: Array[Int]) = mergeSort(A)
 //100 %
-//https://codility.com/demo/results/trainingCR6YD6-9FP/
+//https://codility.com/c/run/trainingFFAVUD-4B5
 
 /*
 
