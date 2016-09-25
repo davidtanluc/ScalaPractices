@@ -1,3 +1,5 @@
+package Hackerrank.Algorithms.strings
+
 //https://www.hackerrank.com/challenges/pangrams
 object Solution {
 
