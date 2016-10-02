@@ -63,75 +63,58 @@ Elements of input arrays can be modified.
 
 
  */
-
-
 def solution(height: Array[Int]): Int = {
-  var result: Int = 0
+  val n = height.length
 
-  if (height == null || height.length <= 2) return result
-  val left = new Array[Int](height.length)
-  val right = new Array[Int](height.length)
+  if (height == null || n <= 2) return 0
+
+  val left = new Array[Int](n)
+  val right = new Array[Int](n)
 
   //scan from left to right
-  var max: Int = height(0)
-  left(0) = height(0)
-  for (i <- 1 until height.length) {
-    if (height(i) < max) {
-      left(i) = max
-    }
-    else {
-      left(i) = height(i)
-      max = height(i)
-    }
+  val head = height.head
+  var max = head
+  left(0) = head
+
+  for (i <- 1 until n) {
+    max = max max height(i)
+    left(i) = max
 
   }
   //println("left:",left.toList)
-  //(left:,List(0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3))
-  //(left:,List(1, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5))
-
 
   //scan from right to left
-  max = height(height.length - 1)
+  val last = height.last
+  max = last
+  right(n - 1) = last
 
-  right(height.length - 1) = height(height.length - 1)
-
-  for (i <- height.length - 2 to 0 by -1) {
-    if (height(i) < max) {
-      right(i) = max
-    }
-    else {
-      right(i) = height(i)
-      max = height(i)
-    }
+  for (i <- n - 2 to 0 by -1) {
+    max = max max height(i)
+    right(i) = max
   }
   //println("right:",right.toList)
-  //(right:,List(3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 1))
-  //(right:,List(5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 2))
 
   //calculate max value
-  for (i <- height.indices) result = result max Math.min(left(i), right(i)) - height(i)
-
-  result
+  val result = (for (i <- height.indices) yield Math.min(left(i), right(i)) - height(i)).toList
+  //println(result)
+  //List(0, 0, 1, 2, 1, 2, 0, 1, 1, 0, 0)
+  result.max
 
 }
-
 val rain1 = Array(0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1)
 val rain2 = Array(1, 3, 2, 1, 2, 1, 5, 3, 3, 4, 2)
 val rain3 = Array(5,8)
-println(solution(rain1))//2
+//println(solution(rain1))//2
 println(solution(rain2)) //2
 println(solution(rain3)) //0
-
 //https://leetcode.com/problems/trapping-rain-water/
 //100 %
-//https://codility.com/demo/results/training8UBBNR-CUX/
+//https://codility.com/demo/results/trainingRHWRGA-NJX/
 /*
 (left:,List(0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3))
 (right:List(3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 1))
       Array(0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1)
-
   diff     (0, 0, 1, 0, 1, 2, 1, 0, 0, 1, 0, 0)
-
 6
 (left:,List (1, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5))
 (right:,List(5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 2))
