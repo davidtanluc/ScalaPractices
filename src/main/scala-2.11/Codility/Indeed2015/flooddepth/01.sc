@@ -94,7 +94,7 @@ def solution(height: Array[Int]): Int = {
   max = height(height.length - 1)
 
   right(height.length - 1) = height(height.length - 1)
-  
+
   for (i <- height.length - 2 to 0 by -1) {
     if (height(i) < max) {
       right(i) = max
