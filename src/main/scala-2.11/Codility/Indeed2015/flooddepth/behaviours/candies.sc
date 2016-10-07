@@ -22,14 +22,15 @@ def candies(ratings: Array[Int]): Int = {
 
       candies(i) = candies(i - 1) + 1
 
-    } else {// if not ascending, assign 1
+    } else {
+      // if not ascending, assign 1
 
       candies(i) = 1
     }
 
   }
   //println(candies.toList)
-//List(1, 2, 3, 1, 2, 1, 2)
+  //List(1, 2, 3, 1, 2, 1, 2)
   var result = candies(n - 1)
   //scan from right to left
   for (i <- n - 2 to 0 by -1) {
@@ -38,10 +39,16 @@ def candies(ratings: Array[Int]): Int = {
     // current rating greater than next
     if (ratings(i) > ratings(i + 1)) cur = candies(i + 1) + 1
 
-    result += Math.max(cur, candies(i))
+    result += cur max candies(i)
 
   }
+  //println(candies.toList)
 
   result
 }
-candies(Array(0,1,2,0,3,1,4)) //12
+//candies(Array(0, 1, 2, 0, 3, 1, 4)) //12
+//candies(Array(1, 0, 2)) //5
+candies(Array(1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1)) //30
+//candies = List(1, 2, 3, 4, 5, 6, 1, 1, 1, 1, 1)
+
+//candies(Array(5, 5, 4, 3, 3, 5, 8, 9, 7)) //17
