@@ -6,14 +6,17 @@ of them may contain thousands of characters! Also, all the words in a language h
 
 However, the aliens like their words to be aesthetically pleasing, which for them means that for the
 
+(1)
 ith letter of an n letter alphabet (letters are indexed at 1): //starting index 1
 
 if 2 * i > n
 the ith letter may be the last letter of a word, and it may be immediately followed by any letter including itself.
 
-
+(2)
 if 2 * i ≤ n
-the ith letter can not be the last letter of a word and also can only be immediately followed by jth letter iff j ≥ 2 * i.
+the ith letter can not be the last letter of a word and also can only be immediately followed by
+
+jth letter iff j ≥ 2 * i.
 
 Sophia wants to know how many different words exist in this language. ( how many words??)
 
@@ -43,7 +46,7 @@ Constraints
 Sample Input
 
 3
-1 3
+1 3 [a,a,a] at index 1 =>
 2 3
 3 2
 Sample Output
@@ -51,17 +54,28 @@ Sample Output
 1
 3
 6
+
+--------------
 Explanation
+--------------
+
 For the first test-case, there's one letter and all the words consist of 3 letters. There's only one possibility which
 is "aaa"
-
+(second)
 For the second test-case, there are two letters (a & b) and all the words are of 3 letters. The possible ones
 are "abb", "bab", & "bbb". The words can end only with 'b' because 2 * index(b) = 2 * 2 > 2 and for 'a',
 it's 2 * index(a) = 2 * 1 <= 2. "aab" is not allowed because 'a' can not be followed immediately by 'a'.
-For a word of length 4 and alphabet of size 2, "abab" would be allowed.
+
+For a word of length 4 and alphabet of size 2, "abab" would be allowed. 2 4
 
 For the third test-case, there are three letters (a, b & c) and all of the words are 2 letters.
 The words can end only with 'b' or 'c'. The possible words are "ab", "ac", "bb", "cc", "bc", "cb"
 
+cb
+ab
+bb
 
+ac
+bc
+cc
  */
