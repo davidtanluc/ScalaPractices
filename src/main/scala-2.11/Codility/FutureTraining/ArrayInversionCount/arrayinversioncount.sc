@@ -87,7 +87,7 @@ val A = Array(-1, 6, 3, 4, 7, 4)
 solution(A) //4
 def solution(A: Array[Int]) = mergeSort(A)
 //100 %
-//https://codility.com/c/run/trainingFFAVUD-4B5
+//https://codility.com/demo/results/trainingDGNR5Q-2ED/
 
 /*
 
