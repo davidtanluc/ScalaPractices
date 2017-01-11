@@ -15,4 +15,5 @@ def solution(A:Array[Int])={
 
 val A = Array(9,3,9,3,9,7,9)
 solution(A)
+
 //https://codility.com/demo/results/trainingS6NMB6-HJ6/  88%
